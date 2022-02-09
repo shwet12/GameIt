@@ -1,0 +1,68 @@
+.game__snake{
+  position: relative;
+  top: 20%;
+}
+
+.game__snake__board {
+  position: relative;
+  background-color: #CCC;
+  margin: auto;
+  max-width: 30vw;
+    min-height: 53vh;
+}
+
+.snake__dot--user {
+  position: absolute;
+  width: 2%;
+  height: 2%;
+  background-color: hsl(200, 100%, 50%);
+  border: .25vmin solid black;
+  z-index: 2;
+}
+
+.snake__dot--opponent {
+  position: absolute;
+  width: 2%;
+  height: 2%;
+  background-color: hsl(0, 100%, 52%);
+  border: .25vmin solid black;
+  z-index: 2;
+} 
+
+
+.snake__food {
+  position: absolute;
+  width: 2%;
+  height: 2%;
+  background-color: hsl(50, 100%, 50%);
+  border: .25vmin solid black;
+  z-index: 1;
+}
+
+
+/* .game__snake {
+  background-color: #CCC;
+  margin: auto;
+  max-width: 30vw;
+  position: relative;
+  top: 25%;
+  min-height: 53vh;
+  display: grid;
+  grid-template-rows: repeat(21, 1fr);
+  grid-template-columns: repeat(21, 1fr);
+}
+
+.snakeUser {
+  background-color: hsl(200, 100%, 50%);
+  border: .25vmin solid black;
+}
+
+.snakeOpponent {
+  background-color: hsl(200, 100%, 50%);
+  border: .25vmin solid black;
+} 
+
+.food {
+  background-color: hsl(50, 100%, 50%);
+  border: .25vmin solid black;
+} */

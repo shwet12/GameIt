@@ -1,0 +1,48 @@
+/* .game__pong__board{
+    border: 2px solid #FFF;
+    position: absolute;
+    margin :auto;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+} */
+
+.game__pong{
+    position: relative;
+    top: 20%;
+  }
+  
+  .game__pong__board {
+    position: relative;
+    background-color: #CCC;
+    margin: auto;
+    max-width: 30vw;
+      min-height: 53vh;
+  }
+
+  .paddle_user{
+      position: absolute;
+      background-color: hsl(200, 100%, 50%);
+      width: 2%;
+  height: 10%;
+      /* top:40%; */
+      left: 0;
+  }
+
+  .paddle_opponent{
+    position: absolute;
+    background-color: hsl(0, 100%, 52%);
+    /* top:40%; */
+    width: 2%;
+  height: 10%;
+    right: 0;
+}
+
+.ball{
+    position: absolute;
+    background-color: black;
+    width: 4%;
+    height: 5%;
+    border-radius: 9px;
+}

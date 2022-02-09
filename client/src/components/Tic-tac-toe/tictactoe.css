@@ -1,0 +1,82 @@
+.game__tictactoe{
+    position: relative;
+    top: 25%;
+}
+.board {
+    margin: auto;
+    max-width: 30vw;
+    min-height: 53vh;
+    font-weight: bold;
+    display: grid;
+    background: #cccccc;
+    gap: 10px;
+    padding: 10px;
+    flex-grow: 1;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.board--disabled{
+    margin: auto;
+    max-width: 30vw;
+    min-height: 53vh;
+    font-weight: bold;
+    display: grid;
+    background: #cccccc;
+    gap: 10px;
+    padding: 10px;
+    flex-grow: 1;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background: #8c54ff;
+    margin: auto;
+    max-width: 30vw;
+}
+
+.header > * {
+    color: #eeeeee;
+}
+
+.header__restart {
+    padding: 12px;
+    margin-bottom: 0;
+}
+
+.header__status {
+    padding: 12px;
+    flex-grow: 1;
+}
+
+.header__restart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+.board__tile {
+    background: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    font-family: cursive;
+    color: #222222;
+}
+
+.board__tile:hover {
+    background: #eeeeee;
+}
+
+.board__tile--winner {
+    color: #4f6dfe;
+}
