@@ -18,7 +18,7 @@ const myPosData = [
 ];
 
 const SnakeGame = ({ players, user, socket, data, onClose }) => {
-    const speed = 500;
+    const speed = 200;
     const [foodPos, setFoodPos] = useState(getRandomCoordinates());
     const [mySnakePos, setMySnakePos] = useState(myPosData);
 
@@ -53,7 +53,7 @@ const SnakeGame = ({ players, user, socket, data, onClose }) => {
 
             intervalId = setInterval(moveSnake, speed);
             intervalIdRef.current = intervalId;
-            document.addEventListener('onKeydown', onKeyDown);
+            document.addEventListener('keydown', onKeyDown);
 
         }
         else {
@@ -71,10 +71,9 @@ const SnakeGame = ({ players, user, socket, data, onClose }) => {
                     setOppSnakePos(oppSnakePos);
                 }
 
-
                 intervalId = setInterval(moveSnake, speed);
                 intervalIdRef.current = intervalId;
-                document.addEventListener('onKeydown', onKeyDown);
+                document.addEventListener('keydown', onKeyDown);
 
             });
         }
@@ -98,7 +97,7 @@ const SnakeGame = ({ players, user, socket, data, onClose }) => {
 
 
         return () => {
-            document.removeEventListener('onKeydown', onKeyDown);
+            document.removeEventListener('keydown', onKeyDown);
             clearInterval(intervalId);
         }
     }, []);
