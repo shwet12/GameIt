@@ -22,11 +22,14 @@ io.on('connection', (socket) => {
         const { error, player } = addPlayer({ id: socket.id, name, room });
 
         console.log(error, player)
-        if (error) return callback(error);
+        if (error) {
+            callback(error);
+            return;
+        }
 
         socket.join(player.room);
 
-        io.to(player.room).emit('roomData', { room: player.room, players: getPlayersInRoom(player.room) });
+        io.to(player.room);
 
         callback();
     });
